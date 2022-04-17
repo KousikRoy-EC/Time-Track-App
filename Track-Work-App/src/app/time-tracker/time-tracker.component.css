@@ -1,0 +1,47 @@
+.form-control {
+  width: 400px;
+}
+
+.Title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.Block {
+  font-size: 4em;
+  width: 100px;
+  height: 100px;
+  color: black;
+  margin: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.MBlock {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-control-2 {
+  width: 460px;
+  height: 100px;
+  font-size: 14pt;
+}
+
+.container-fluid {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  color: white;
+  font-weight: 400;
+}
+
+.exportbtn {
+  position: absolute;
+  right: 0;
+  margin-right: 15px;
+}
