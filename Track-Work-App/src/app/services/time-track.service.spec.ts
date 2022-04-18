@@ -26,7 +26,6 @@ describe('TimeTrackService', () => {
 
   let httpTestingController: HttpTestingController;
   let service: TimeTrackService;
-  let baseUrl = '';
   let modell: Mymodel;
 
   beforeEach(() => {
@@ -56,9 +55,9 @@ describe('TimeTrackService', () => {
     httpTestingController.verify();
   });
 
-  it('should return id data', () => {
+  it('should return all data', () => {
     let result: Mymodel[] = [];
-    service.getDataById(modell.UserId).subscribe((res: any) => {
+    service.getAlldata().subscribe((res: any) => {
       result = res;
       expect(res.length).toBe(1);
       expect(result[0]).toEqual(modell);
@@ -68,13 +67,13 @@ describe('TimeTrackService', () => {
     req.flush([modell]);
   });
 
-  it('should add a new data', () => {
-    service.saveTimer(modell).subscribe((res) => {
-      expect(res).toEqual(modell);
-    });
+  // it('should add a new data', () => {
+  //   service.saveTimer(modell).subscribe((res) => {
+  //     expect(res).toEqual(modell);
+  //   });
 
-    const req = httpTestingController.expectOne(service.baseUrl);
-    expect(req.request.method).toBe('POST');
-    req.flush(modell);
-  });
+  //   const req = httpTestingController.expectOne(service.baseUrl);
+  //   expect(req.request.method).toBe('POST');
+  //   req.flush(modell);
+  // });
 });
